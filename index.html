@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Books</title>
+  <link rel="stylesheet" href="style/main.css">
+</head>
+<body class="body-sign-in">
+  <div class="modal">
+    <form class="modal-card" id="log-in">
+      <h2 class="h2">
+        sign in
+      </h2>
+      <div class="conteiner-input">
+        <input class="input-one"  maxlength="20" required autocomplete="off" type="text" name="username" id="userName">
+        <label class="label-for-input" for="name">name</label>
+      </div>
+      <div class="conteiner-input">
+        <input class="input-one" maxlength="20" required type="password" name="password" id="password">
+        <label class="label-for-input" for="password">password</label>
+      </div>
+      <button class="btn" type="submit">log in</button>
+      <a href="./page/signUp/index.html" class="regist-btn">registration</a>
+    </form>
+  </div>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script src="./js/signIn.js"></script>
+</body>
+</html>

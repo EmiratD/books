@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>signUp</title>
+  <link rel="stylesheet" href="../../style/main.css">
+</head>
+<body class="body-sign-up">
+  <div class="modal">
+    <form class="modal-card" id="sign-up">
+      <h2 class="h2">
+        sign up
+      </h2>
+      <div class="conteiner-input">
+        <input class="input-one" required autocomplete="off" type="text" name="username" id="new-userName">
+        <label class="label-for-input" for="name"  maxlength="5">name</label>
+      </div>
+      <div class="conteiner-input">
+        <input class="input-one" required type="password" name="password" id="new-password">
+        <label class="label-for-input" for="password">password</label>
+      </div>
+      <div class="conteiner-input">
+        <input class="input-one" required type="password" name="password" id="new-confirm-password">
+        <label class="label-for-input" for="password">confirm password</label> 
+      </div>
+      <button class="btn" id="btn-registration">registration</button>
+      <a href="../../index.html" class="regist-btn">log in</a>
+    </form>
+  </div>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script src="../../js/signUp.js"></script>
+</body>
+</html>
