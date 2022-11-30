@@ -3,13 +3,15 @@
    font-size: 34px;
 }
 .body-sign-up{
-  background: no-repeat url(/assets/img/pen.avif);
+  background:  url(/assets/img/regist2.jpg);
+  background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 .body-sign-in{
-  background: no-repeat url(/assets/img/library.jpg);
+  background:  url(/assets/img/library2.jpg);
+  background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -26,6 +28,7 @@
   background: $back-color-fourth;
   border-radius: 20px;
   padding: 30px;
+  position: relative;
 }
 .label-for-input{
   width: 100%;
@@ -43,23 +46,28 @@
   height: 60px;
   display: flex;
   flex-direction: column-reverse;
-  position: relative;
-  input:focus ~ label{
-    color: $text-color-five;
-  }
+  // position: relative;
   input:hover ~ label{
     color: $text-color-one;
+  }
+  input:focus ~ label{
+    color: $text-color-five;
   }
 }
 
 .note-valid{
   position: absolute;
-  bottom: 30px;
-  right: 0;
-  width: auto;
-  height: 30px;
-  font-size: 12;
+  top: 0px;
+  right: -230px;
+  width: 200px;
+  height: auto;
+  padding: 5px 10px;
+  background: $back-color-fourth;
+  border-radius: 10px;
+  font-size: 18px;
+  line-height: 120%;
   color: $negative-color;
+  z-index: 2;
 }
 
 .input-one {

@@ -59,13 +59,15 @@ body {
   font-size: 34px; }
 
 .body-sign-up {
-  background: no-repeat url(/assets/img/pen.avif);
+  background: url(/assets/img/regist2.jpg);
+  background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover; }
 
 .body-sign-in {
-  background: no-repeat url(/assets/img/library.jpg);
+  background: url(/assets/img/library2.jpg);
+  background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover; }
@@ -80,7 +82,8 @@ body {
   align-items: center;
   background: rgba(0, 0, 0, 0.9);
   border-radius: 20px;
-  padding: 30px; }
+  padding: 30px;
+  position: relative; }
 
 .label-for-input {
   width: 100%;
@@ -95,21 +98,25 @@ body {
   width: 100%;
   height: 60px;
   display: flex;
-  flex-direction: column-reverse;
-  position: relative; }
-  .conteiner-input input:focus ~ label {
-    color: #1b2df3; }
+  flex-direction: column-reverse; }
   .conteiner-input input:hover ~ label {
     color: white; }
+  .conteiner-input input:focus ~ label {
+    color: #1b2df3; }
 
 .note-valid {
   position: absolute;
-  bottom: 30px;
-  right: 0;
-  width: auto;
-  height: 30px;
-  font-size: 12;
-  color: rgba(234, 210, 31, 0.8); }
+  top: 0px;
+  right: -230px;
+  width: 200px;
+  height: auto;
+  padding: 5px 10px;
+  background: rgba(0, 0, 0, 0.9);
+  border-radius: 10px;
+  font-size: 18px;
+  line-height: 120%;
+  color: #ca9c48;
+  z-index: 2; }
 
 .input-one {
   width: 100%;
@@ -149,5 +156,118 @@ body {
   cursor: pointer; }
   .btn:hover {
     background: #1b2df3; }
+
+.body-library-page {
+  padding-top: 50px;
+  background: url(/assets/img/books2.jpg);
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover; }
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  background: rgba(0, 0, 0, 0.9);
+  z-index: 100; }
+  .header .header-nav {
+    width: auto;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 50px; }
+    .header .header-nav .header-nav__logo {
+      color: white;
+      font-size: 34px;
+      font-weight: 600; }
+    .header .header-nav .header-nav__conteiner {
+      width: 150px;
+      height: 32px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center; }
+
+.bord {
+  width: auto;
+  min-height: 500px;
+  margin: 70px 150px;
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 20px;
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start; }
+
+.bord-actions {
+  width: 100%;
+  height: 30px; }
+  .bord-actions .bord-actions__sertch {
+    width: 200px;
+    height: 25px;
+    position: relative; }
+    .bord-actions .bord-actions__sertch input {
+      box-sizing: border-box;
+      width: 100%;
+      height: 30px;
+      position: absolute;
+      left: 0;
+      top: 0;
+      padding: 0 30px 0 10px;
+      background: rgba(0, 0, 0, 0.9);
+      border-radius: 10px;
+      color: white; }
+    .bord-actions .bord-actions__sertch svg {
+      width: 20px;
+      height: 20px;
+      position: absolute;
+      right: 10px;
+      bottom: 0; }
+
+.bord-books {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px; }
+  .bord-books .bord-books__card {
+    width: 150px;
+    height: auto;
+    padding: 5px;
+    border: 1px solid rgba(38, 45, 127, 0.8);
+    background: rgba(0, 0, 0, 0.9);
+    position: relative; }
+    .bord-books .bord-books__card p {
+      margin: 10px 0;
+      color: white; }
+    .bord-books .bord-books__card:hover {
+      transform: scale(1.02);
+      transition: 0.2s; }
+    .bord-books .bord-books__card .bord-books__card-img {
+      width: 150px;
+      height: 200px; }
+      .bord-books .bord-books__card .bord-books__card-img img {
+        width: 100%;
+        height: 100%; }
+    .bord-books .bord-books__card .bord-books__card-book {
+      font-size: 14px;
+      width: 120px;
+      height: 30px;
+      overflow: hidden;
+      text-overflow: ellipsis; }
+    .bord-books .bord-books__card .bord-books__card-author {
+      font-size: 12px; }
+    .bord-books .bord-books__card .bord-books__card-like {
+      position: absolute;
+      bottom: 17px;
+      right: 10px; }
+      .bord-books .bord-books__card .bord-books__card-like:hover svg path {
+        fill: #ffe100; }
 
 /*# sourceMappingURL=main.css.map */

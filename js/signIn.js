@@ -1,15 +1,15 @@
 window.addEventListener("DOMContentLoaded", () => {
   const userName = document.querySelector("#userName"),
-    userPassword = document.querySelector("#password"),
-    logIn = document.querySelector("#log-in");
+        userPassword = document.querySelector("#password"),
+        logIn = document.querySelector("#log-in");
     
   const url = "http://localhost:1717";
-    
+  const token = localStorage.getItem('token');
     
   const validInfo = (element) => {
     const info = document.createElement("div");
     info.classList.add("note-valid");
-    info.innerHTML = "only a-z and 1-9";
+    info.innerHTML = 'Only letters from "A-z" and numbers "0-9" can be used.';
     element.addEventListener("input", (e) => {
       input = element.querySelector("input");
       label = element.querySelector("label");
@@ -18,12 +18,12 @@ window.addEventListener("DOMContentLoaded", () => {
       const bool = valid.test(`${value}`);
       if (!bool) {
         input.style =
-          "border-bottom: rgba(234, 210, 31, 0.8) solid 2px;color: rgba(234, 210, 31, 0.8);";
-        label.style = "color: rgba(234, 210, 31, 0.8);";
+          "border-bottom: rgb(202, 156, 72) solid 2px;color: rgb(202, 156, 72);";
+        label.style = "color: rgb(202, 156, 72);";
         element.appendChild(info);
       } else {
-        input.style = " ";
-        label.style = " ";
+        input.style = "";
+        label.style = "";
         info.remove();
       }
     });
@@ -40,8 +40,13 @@ window.addEventListener("DOMContentLoaded", () => {
       password: userPassword.value,
     };
 
-    const response = await axios.post(url + "/login", userInfo);
-    console.log(response.data.token);
-    localStorage.setItem("userInfo", `${response.data.token}`);
+    try {
+      const response = await axios.post(url + "/login", userInfo);
+      console.log(response.data.token);
+      localStorage.setItem("token", `${response.data.token}`);
+      window.location.href = '../page/books/index.html'
+    } catch (error) {
+      console.log(error);
+    }
   });
 });

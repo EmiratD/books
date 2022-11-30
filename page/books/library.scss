@@ -1,0 +1,130 @@
+.body-library-page {
+  padding-top: 50px;
+  background: url(/assets/img/books2.jpg);
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  background: $back-color-fourth;
+  z-index: 100;
+  .header-nav {
+    width: auto;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 50px;
+    .header-nav__logo {
+      color: $text-color-one;
+      font-size: 34px;
+      font-weight: 600;
+    }
+    .header-nav__conteiner {
+      width: 150px;
+      height: 32px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+}
+.bord {
+  width: auto;
+  min-height: 500px;
+  margin: 70px 150px;
+  padding: 10px;
+  background: $back-color-one;
+  border-radius: 20px;
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+}
+.bord-actions {
+  width: 100%;
+  height: 30px;
+  .bord-actions__sertch {
+    width: 200px;
+    height: 25px;
+    position: relative;
+    input{
+      box-sizing: border-box;
+      width: 100%;
+      height: 30px;
+      position: absolute;
+      left: 0;
+      top: 0;
+      padding: 0 30px 0 10px;
+      background: $back-color-fourth;
+      border-radius: 10px;
+      color: $text-color-one;
+    }
+    svg{
+      width: 20px;
+      height: 20px;
+      position: absolute;
+      right: 10px;
+      bottom: 0;
+    }
+  }
+}
+.bord-books {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  .bord-books__card {
+    width: 150px;
+    height: auto;
+    padding: 5px;
+    border: 1px solid $border-color-two;
+    background: $back-color-fourth;
+    position: relative;
+    p{
+      margin:  10px 0;
+      color: $text-color-one;
+    }
+    &:hover{
+      transform:scale(1.02);
+      transition: 0.2s;
+    }
+    .bord-books__card-img {
+      width: 150px;
+      height: 200px;
+      img{
+        width: 100%;
+        height: 100%;
+      }
+    }
+    .bord-books__card-book {
+      font-size: 14px;
+      width: 120px;
+      height: 30px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .bord-books__card-author {
+      font-size: 12px;
+    }
+    .bord-books__card-like{
+      position: absolute;
+      bottom: 17px;
+      right: 10px;
+      &:hover svg path{
+        fill: $like-hover-color;
+      }
+    }
+  }
+}
+.footer {
+}

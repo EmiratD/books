@@ -20,7 +20,6 @@ button, input[type="submit"], input[type="reset"] {
 }
 
 body{
-
   font-family: 'Montserrat', sans-serif;
 }
 .modal{
@@ -37,7 +36,4 @@ body{
 
 @import "../scss/var";
 @import "../scss/log_in";
-
-.red{
-  
-}
+@import "../page/books/library";
