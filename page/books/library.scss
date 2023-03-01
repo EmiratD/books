@@ -6,6 +6,7 @@
   background-repeat: no-repeat;
   background-size: cover;
 }
+
 .header {
   position: fixed;
   top: 0;
@@ -14,6 +15,7 @@
   height: 50px;
   background: $back-color-fourth;
   z-index: 100;
+
   .header-nav {
     width: auto;
     height: 50px;
@@ -21,23 +23,49 @@
     justify-content: space-between;
     align-items: center;
     margin: 0 50px;
+
     .header-nav__logo {
-      color: $text-color-one;
       font-size: 34px;
       font-weight: 600;
+
+      a {
+        color: $text-color-one;
+      }
     }
+
     .header-nav__conteiner {
       width: 150px;
       height: 32px;
       display: flex;
       justify-content: space-between;
       align-items: center;
+
+      .favourites {
+        cursor: pointer;
+
+        svg:hover {
+          path {
+            stroke: $border-color-fourth;
+          }
+        }
+      }
+
+      .library {
+        cursor: pointer;
+
+        svg:hover {
+          path {
+            fill: $border-color-fourth;
+          }
+        }
+      }
     }
   }
 }
+
 .bord {
   width: auto;
-  min-height: 500px;
+  min-height: 300px;
   margin: 70px 150px;
   padding: 10px;
   background: $back-color-one;
@@ -48,14 +76,17 @@
   justify-content: start;
   align-items: start;
 }
+
 .bord-actions {
   width: 100%;
   height: 30px;
+
   .bord-actions__sertch {
     width: 200px;
     height: 25px;
     position: relative;
-    input{
+
+    input {
       box-sizing: border-box;
       width: 100%;
       height: 30px;
@@ -67,7 +98,8 @@
       border-radius: 10px;
       color: $text-color-one;
     }
-    svg{
+
+    svg {
       width: 20px;
       height: 20px;
       position: absolute;
@@ -76,6 +108,7 @@
     }
   }
 }
+
 .bord-books {
   width: 100%;
   height: auto;
@@ -83,6 +116,7 @@
   justify-content: center;
   flex-wrap: wrap;
   gap: 20px;
+
   .bord-books__card {
     width: 150px;
     height: auto;
@@ -90,22 +124,34 @@
     border: 1px solid $border-color-two;
     background: $back-color-fourth;
     position: relative;
-    p{
-      margin:  10px 0;
+    border-radius: 5px;
+
+    p {
+      margin: 10px 0;
       color: $text-color-one;
     }
-    &:hover{
-      transform:scale(1.02);
+
+    &:hover {
+      transform: scale(1.02);
       transition: 0.2s;
     }
+
+    &:focus {
+      box-shadow: 0px 0px 8px 5px $back-color-three inset;
+      transform: scale(1.02);
+      transition: 0.2s;
+    }
+
     .bord-books__card-img {
       width: 150px;
       height: 200px;
-      img{
+
+      img {
         width: 100%;
         height: 100%;
       }
     }
+
     .bord-books__card-book {
       font-size: 14px;
       width: 120px;
@@ -113,18 +159,70 @@
       overflow: hidden;
       text-overflow: ellipsis;
     }
+
     .bord-books__card-author {
       font-size: 12px;
     }
-    .bord-books__card-like{
+
+    .bord-books__card-like {
       position: absolute;
       bottom: 17px;
       right: 10px;
-      &:hover svg path{
+
+      &:hover svg path {
         fill: $like-hover-color;
       }
     }
   }
 }
-.footer {
+
+.info-books-card {
+  position: relative;
+  width: auto;
+  height: auto;
+  display: flex;
+  gap: 10px;
+  padding: 10px;
+  background: $back-color-one;
+  box-shadow: 0px 0px 8px 2px $back-color-fourth inset;
+  border-radius: 10px;
+
+  &-img {
+    width: 300px;
+    height: 400px;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &-block {
+    background: $back-color-fourth;
+    padding: 10px 5px;
+  }
+
+  &-text {
+    width: 250px;
+    height: auto;
+    margin: 10px 5px;
+    color: $text-color-one;
+    padding-bottom: 5px;
+    border-bottom: 2px solid $border-color-two;
+  }
+
+  .deleteBtn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 30px;
+    height: 30px;
+
+    svg {
+      width: 100%;
+      height: 100%;
+    }
+  }
 }
+
+.footer {}

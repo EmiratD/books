@@ -13,7 +13,7 @@ window.addEventListener("DOMContentLoaded", () => {
   const validInfo = (element) => {
     const info = document.createElement("div");
     info.classList.add("note-valid");
-    info.innerHTML = "Only letters from 'A-z' and numbers '0-9' can be used.";
+    info.innerHTML = 'Only letters from "A-z" and numbers "0-9" can be used.';
     element.addEventListener("input", (e) => {
       input = element.querySelector("input");
       label = element.querySelector("label");
