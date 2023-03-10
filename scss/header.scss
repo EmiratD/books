@@ -1,0 +1,55 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  background: $back-color-fourth;
+  z-index: 100;
+
+  .header-nav {
+    width: auto;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 50px;
+
+    .header-nav__logo {
+      font-size: 34px;
+      font-weight: 600;
+
+      a {
+        color: $text-color-one;
+      }
+    }
+
+    .header-nav__conteiner {
+      width: 150px;
+      height: 32px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .favourites {
+        cursor: pointer;
+
+        svg:hover {
+          path {
+            stroke: $border-color-fourth;
+          }
+        }
+      }
+
+      .library {
+        cursor: pointer;
+
+        svg:hover {
+          path {
+            fill: $border-color-fourth;
+          }
+        }
+      }
+    }
+  }
+}
