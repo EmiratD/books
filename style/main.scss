@@ -34,6 +34,19 @@ body{
   flex-direction: column;
 }
 
+.btn-exit{
+  width: 60px;
+  height: 30px;
+  background: white;
+  font-weight: bold;
+  &:hover{
+    transform: scale(0.95)
+  }
+}
+
+
 @import "../scss/var";
+@import "../scss/header";
 @import "../scss/log_in";
-@import "../page/books/library";
+@import "../scss/books";
+@import "../scss/newBook";
